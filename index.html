@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #playlist ul{
+            list-style: none;
+        }
+        #playlist li a{
+            color:black;
+            text-decoration: none;
+        }
+        #playlist .current{
+            color:blue;
+        }
+        
+        
+        #videoPlaylist ul{
+            list-style: none;
+        }
+        #videoPlaylist li a{
+            color:black;
+            text-decoration: none;
+        }
+        #videoPlaylist .current-video{
+            color:forestgreen;
+        }
+    </style>
+</head>
+<body>
+    <audio id="player" controls autoplay></audio>
+    <section id="playlist">
+        <ul>
+            <li><a href="audio/Broken%20Reality.mp3#t=210">Test</a></li>
+            <li><a href="audio/Exit%20the%20Premises.mp3">Exit The Premises</a></li>
+            <li><a href="audio/Severe%20Tire%20Damage.mp3">Severe Tire Damage</a></li>
+        </ul>
+    </section>
+    <hr>
+    <video id="videoPlayer" controls width="640px" height="360px"></video>
+    <section id="videoPlaylist">
+        <ul>
+            <li><a href="video/342885074.mp4">Leafs Tree Wind Autumn</a></li>
+            <li><a href="video/342964571.mp4">Sunset over City</a></li>
+            <li><a href="video/342518069.mp4">Android Tablet Zoom In Gesture</a></li>
+        </ul>
+    </section>
+    
+    <script src="mediaPlaylist.js"></script>
+    <script>
+        
+        var mediaPlayer = new MediaPlaylist({
+            currentClass: "current",
+            playerId: "player",
+            playlistId: "playlist"
+        });
+        var videoPlayer = new MediaPlaylist({
+            currentClass: "current-video",
+            playerId: "videoPlayer",
+            playlistId: "videoPlaylist"
+        });
+    </script>
+</body>
+</html>
