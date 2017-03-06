@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Media Playlist Demo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <style>
         #playlist ul{
             list-style: none;
@@ -30,23 +31,29 @@
 </head>
 <body>
     <h1>Demo <em>(<a href="https://github.com/TechTube/HTML5MediaPlaylist/archive/master.zip">Download</a>)</em></h1>
-    <audio id="player" controls></audio>
-    <section id="playlist">
-        <ul>
-            <li><a href="audio/Broken%20Reality.mp3#t=210">Test</a></li>
-            <li><a href="audio/Exit%20the%20Premises.mp3">Exit The Premises</a></li>
-            <li><a href="audio/Severe%20Tire%20Damage.mp3">Severe Tire Damage</a></li>
-        </ul>
-    </section>
-    <hr>
-    <video id="videoPlayer" controls width="640px" height="360px"></video>
-    <section id="videoPlaylist">
-        <ul>
-            <li><a href="video/342885074.mp4">Leafs Tree Wind Autumn</a></li>
-            <li><a href="video/342964571.mp4">Sunset over City</a></li>
-            <li><a href="video/342518069.mp4">Android Tablet Zoom In Gesture</a></li>
-        </ul>
-    </section>
+    
+        <div class="row">
+        <div class="col-md-6">
+                <audio id="player" controls autoplay></audio>
+                    <section id="playlist">
+                        <ul>
+                             <li><a href="audio/Broken%20Reality.mp3#t=210">Test</a></li>
+                            <li><a href="audio/Exit%20the%20Premises.mp3">Exit The Premises</a></li>
+                            <li><a href="audio/Severe%20Tire%20Damage.mp3">Severe Tire Damage</a></li>
+                        </ul>
+                    </section>
+        </div>
+        <div class="col-md-6">
+                <video id="videoPlayer" controls width="320px" height="180px"></video>
+                <section id="videoPlaylist">
+                    <ul>
+                                    <li><a href="video/342885074.mp4">Leafs Tree Wind Autumn</a></li>
+                                    <li><a href="video/342964571.mp4">Sunset over City</a></li>
+                                    <li><a href="video/342518069.mp4">Android Tablet Zoom In Gesture</a></li>
+                    </ul>
+                </section>
+        </div>
+    </div>
     
     <script src="mediaPlaylist.js"></script>
     <script>
